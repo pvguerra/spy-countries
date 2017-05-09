@@ -26,54 +26,66 @@
         {{selectedCountry.name}} | {{selectedCountry.region}} | {{selectedCountry.subregion}}
       </p>
       <p>
-        <ion-icon name='clock' item-left></ion-icon>
+        <ion-icon name='clock' color="primary" item-left></ion-icon>
         Timezones | {{selectedCountry.timezones}}
       </p>
       <p>
-        <ion-icon name='globe' item-left></ion-icon>
+        <ion-icon name='globe' color="primary" item-left></ion-icon>
         Borders | {{selectedCountry.borders}}
       </p>
 
     </ion-card-content>
 
     <ion-item>
-      <ion-icon name='chatbubbles' item-left></ion-icon>
+      <ion-icon name='flag' color="primary" item-left></ion-icon>
+      Capital
+      <ion-badge item-right>{{selectedCountry.capital}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='chatbubbles' color="primary" item-left></ion-icon>
       Language
       <ion-badge item-right *ngFor="let lang of selectedCountry.languages">{{lang.name}}</ion-badge>
     </ion-item>
 
     <ion-item>
-      <ion-icon name='cash' item-left></ion-icon>
+      <ion-icon name='cash' color="primary" item-left></ion-icon>
       Currencies
       <ion-badge item-right *ngFor="let curr of selectedCountry.currencies">{{curr.symbol}} • {{curr.name}}</ion-badge>
     </ion-item>
 
     <ion-item>
-      <ion-icon name='people' item-left></ion-icon>
+      <ion-icon name='people' color="primary" item-left></ion-icon>
       Population
       <ion-badge item-right>{{selectedCountry.population}}</ion-badge>
     </ion-item>
 
     <ion-item>
-      <ion-icon name='call' item-left></ion-icon>
+      <ion-icon name='call' color="primary" item-left></ion-icon>
       Code
       <ion-badge item-right>+{{selectedCountry.callingCodes}}</ion-badge>
     </ion-item>
 
     <ion-item>
-      <ion-icon name='square' item-left></ion-icon>
+      <ion-icon name='wifi' color="primary" item-left></ion-icon>
+      Domain
+      <ion-badge item-right>{{selectedCountry.topLevelDomain}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='square' color="primary" item-left></ion-icon>
       Area
       <ion-badge item-right>{{selectedCountry.area}} km²</ion-badge>
     </ion-item>
 
     <ion-item>
-      <ion-icon name='compass' item-left></ion-icon>
+      <ion-icon name='compass' color="primary" item-left></ion-icon>
       Latitude
       <ion-badge item-right>{{selectedCountry.latlng[0]}}°</ion-badge>
     </ion-item>
 
     <ion-item>
-      <ion-icon name='compass' item-left></ion-icon>
+      <ion-icon name='compass' color="primary" item-left></ion-icon>
       Longitude
       <ion-badge item-right>{{selectedCountry.latlng[1]}}°</ion-badge>
     </ion-item>
