@@ -1,18 +1,27 @@
 <ion-header>
   <ion-navbar>
-    <ion-title><ion-icon name="globe"></ion-icon> Countries</ion-title>
+    <ion-title><ion-icon name="globe"></ion-icon> Spy Countries </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <ion-item *ngFor="let country of countries">
-      <ion-avatar item-left>
-        <img src="{{country.flag}}" (click)="countryTapped($event, country)">
-      </ion-avatar>
-      <h2>{{country.name}}</h2>
-      <p>Capital: {{country.capital}}, Region: {{country.region}}</p>
-      <ion-note item-right>{{country.alpha3Code}}</ion-note>
-    </ion-item>
-  </ion-list>
+<ion-content class="cards-bg">
+  <ion-card>
+    <img src="../../assets/img/world-map-large.png"/>
+    <ion-card-content>
+      <ion-card-title>
+        Countries List
+        </ion-card-title>
+      <p>
+        Get access to a basic info of all countries of the world.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-center>
+        <button ion-button small color="primary" (click)="goToCountryList()">
+           View
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>

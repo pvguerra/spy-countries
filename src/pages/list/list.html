@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title><ion-icon name="globe"></ion-icon> Countries</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let country of countries">
+      <ion-avatar item-left>
+        <img src="{{country.flag}}" (click)="countryTapped($event, country)"/>
+      </ion-avatar>
+      <h2>{{country.name}}</h2>
+      <p>Capital: {{country.capital}}, Region: {{country.region}}</p>
+      <ion-note item-right>{{country.alpha3Code}}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
