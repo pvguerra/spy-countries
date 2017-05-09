@@ -1,0 +1,82 @@
+<!--
+  Generated template for the CountryDetail page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{selectedCountry.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+
+    <img src="{{selectedCountry.flag}}"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{selectedCountry.nativeName}}
+      </ion-card-title>
+      <p>
+        {{selectedCountry.name}} | {{selectedCountry.region}} | {{selectedCountry.subregion}}
+      </p>
+      <p>
+        <ion-icon name='clock' item-left></ion-icon>
+        Timezones | {{selectedCountry.timezones}}
+      </p>
+      <p>
+        <ion-icon name='globe' item-left></ion-icon>
+        Borders | {{selectedCountry.borders}}
+      </p>
+
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='chatbubbles' item-left></ion-icon>
+      Language
+      <ion-badge item-right *ngFor="let lang of selectedCountry.languages">{{lang.name}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='cash' item-left></ion-icon>
+      Currencies
+      <ion-badge item-right *ngFor="let curr of selectedCountry.currencies">{{curr.symbol}} • {{curr.name}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='people' item-left></ion-icon>
+      Population
+      <ion-badge item-right>{{selectedCountry.population}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='call' item-left></ion-icon>
+      Code
+      <ion-badge item-right>+{{selectedCountry.callingCodes}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='square' item-left></ion-icon>
+      Area
+      <ion-badge item-right>{{selectedCountry.area}} km²</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='compass' item-left></ion-icon>
+      Latitude
+      <ion-badge item-right>{{selectedCountry.latlng[0]}}°</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='compass' item-left></ion-icon>
+      Longitude
+      <ion-badge item-right>{{selectedCountry.latlng[1]}}°</ion-badge>
+    </ion-item>
+
+  </ion-card>
+</ion-content>
